@@ -6,10 +6,9 @@
 
 1. GET /cache/get/:key
 
-        find in the database for the selected key, if its not found and the number 
-        of documents is valid it creates one, if the number of documents is greater than 100
-        it overrides the oldest found
-        return {key: "string", value: "string"}
+        find in the database for the cache with the selected key and return it, if its not found 
+        check the number of cache documents, if the number of documents is greater than 10 
+        it overrides the oldest found, otherwise it creates one
 
 2. GET /cache/getKeys 
 
@@ -18,16 +17,16 @@
         
 3. POST /cache
 
-        accept and object {key: "string"} and create or update the selected key with a new
+        accept an object with structure {key: "string"} and create or update the selected key with a new
         generated value
 
 4. DELETE /cache/:key
 
-        delete the selected key, if there is no key returns 404. 
+        delete the selected key. 
 
 5. DELETE /cache/
 
-        delete all the caches
+        delete all the cache documents
         
  
 ####Any cache value will be updated if the cache is older than a week during the get operations
