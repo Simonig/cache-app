@@ -1,4 +1,4 @@
-# Cache Application
+# Cache API
 
 
 ## Api routes
@@ -25,7 +25,7 @@
 
         delete the selected key, if there is no key returns 404. 
 
-5.DELETE /cache/
+5. DELETE /cache/
 
         delete all the caches
         
